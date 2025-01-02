@@ -1,4 +1,4 @@
-//Time Complexity: O(n) , Space Complexity: O(1)
+//Time Complexity: O(n) , RSpace Complexity: O(1)
 class Solution {
     public String getHint(String secret, String guess) {
         int bulls = 0, cows = 0;

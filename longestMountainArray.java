@@ -1,3 +1,4 @@
+//time complexity: O(n)
 class Solution {
     public int longestMountain(int[] arr) {
         int max = 0;

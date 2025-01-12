@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public long maximumSubarraySum(int[] nums, int k) {
         int n = nums.length;
@@ -5,12 +7,12 @@ class Solution {
         long currentSum = 0;
         long maxSum = 0;
         int begin = 0;
-        
+
         for (int end = 0; end < n; end++) {
             if (!elements.contains(nums[end])) {
                 currentSum += nums[end];
                 elements.add(nums[end]);
-                
+
                 if (end - begin + 1 == k) {
                     maxSum = Math.max(maxSum, currentSum);
                     currentSum -= nums[begin];
@@ -26,7 +28,7 @@ class Solution {
                 begin++;
             }
         }
-        
+
         return maxSum;
     }
 }
